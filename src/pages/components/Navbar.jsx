@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-secondary-content rounded-2xl p-3">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-5 w-5 text-primary"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -26,62 +27,78 @@ const Navbar = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Item 1</a>
+              <Link
+                to={"/drugSearch"}
+                className="hover:text-primary-content font-semibold"
+              >
+                DRUG SEARCH
+              </Link>
             </li>
             <li tabIndex={0}>
-              <a className="justify-between">
-                Parent
-                <svg
-                  className="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                </svg>
-              </a>
               <ul className="p-2">
                 <li>
-                  <a className="hover:text-primary-content font-semibold">
+                  <Link
+                    to={"/drugSearch"}
+                    className="hover:text-primary-content font-semibold"
+                  >
                     DRUG SEARCH
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="hover:text-primary-content font-semibold">
+                  <Link
+                    to={"/drugScan"}
+                    className="hover:text-primary-content font-semibold"
+                  >
                     DRUG SCAN
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link
+                to={"/drugScan"}
+                className="hover:text-primary-content font-semibold"
+              >
+                DRUG SCAN
+              </Link>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-2xl font-bold text-primary">
+        <Link
+          to={"/about"}
+          className="btn btn-ghost normal-case text-2xl font-bold text-primary"
+        >
           Mediscan
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a className="hover:text-primary-content font-semibold">
+            <Link
+              to={"/drugScan"}
+              className="hover:text-white text-primary font-bold"
+            >
               DRUG SCAN
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a className="hover:text-primary-content font-semibold">
+            <Link
+              to={"/drugSearch"}
+              className="hover:text-white text-primary font-bold"
+            >
               DRUG SEARCH
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-secondary font-semibold btn-outline ">
+        <Link
+          to={"/"}
+          className="btn btn-secondary font-bold text-md btn-outline "
+        >
           Get started
-        </a>
+        </Link>
       </div>
     </div>
   );
