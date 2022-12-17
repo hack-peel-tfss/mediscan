@@ -3,7 +3,9 @@ import DrugCard from './components/DrugCard'
 
 const DrugResult = () => {
   return (
-    <div><DrugCard/></div>
+    <div class="flex flex-wrap justify-between w-full p-2">
+      <DrugCard/><DrugCard/><DrugCard/><DrugCard/><DrugCard/><DrugCard/>
+    </div>
   )
 }
 
