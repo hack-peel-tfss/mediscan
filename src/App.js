@@ -16,15 +16,14 @@ function App() {
       <div className="p-3">
         <Navbar />
 
-        <main className="container mx-auto px-3 pb-12">
+        <main className="container mx-auto px-3 pb-12 flex items-center justify-center flex-col">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/notfound" element={<NotFound />} />
-            <Route path="/drugSearch" element={<DrugSearch />} />
-            <Route path="/drugScan" element={<DrugScan />} />
-
-            <Route path="/drugResult/:drugid" element={<DrugResult />} />
+            {/* <Route path="/drugSearch" element={<DrugSearch />} />
+            <Route path="/drugScan" element={<DrugScan />} /> */}
+            {/* <Route path="/drugResult/:drugid" element={<DrugResult />} /> */}
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </main>
