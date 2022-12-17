@@ -5,3 +5,5 @@ const DrugResult = () => {
     <div>DrugResult</div>
   )
 }
+
+export default DrugResult
